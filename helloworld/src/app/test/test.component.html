@@ -1,0 +1,71 @@
+<p-menubar [model]="items">
+    <ng-template pTemplate="start">
+        <img src="https://primefaces.org/cdn/primeng/images/primeng.svg" height="40" class="mr-2">
+    </ng-template>
+    <ng-template pTemplate="end">
+        <input type="text" pInputText placeholder="Search">
+    </ng-template>
+</p-menubar>
+
+
+
+    <h1> {{date | date:'full'}}</h1>
+
+
+
+<!--<h1 style="text-align: center;"> welcome test</h1>-->
+<p-tabMenu [model]="items" [activeItem]="activeItem"></p-tabMenu>
+
+
+
+<button class="test " routerLink ="/home">home</button>
+
+<h1>{{name}}</h1>
+<p>Hello{{name2}}</p>
+<p>{{getStatus()}}</p>
+
+<button (click)="save()" >Envoyer</button>
+<ul *ngFor="let n of nameList">
+    <li>
+        {{n}}
+    </li>
+</ul>
+<div *ngIf ="condition">
+    <h1>
+      hello world!!!!
+    </h1>
+</div>
+<div>
+    <input type="test" class="form-control" [(ngModel)]="msg"><b class="text-danger">{{msg}}</b>
+</div>
+<div>
+    <div [ngSwitch]="name">
+        <div *ngSwitchCase="'Ahmed'">welcome Ahmed</div>
+        <div *ngSwitchCase ="'Ali'">welcome ali</div>
+    <div *ngSwitchCase="'Asma'">welcome asma</div>
+
+    </div>
+</div>
+
+
+
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+
+
+<button pButton pRipple type="button" label="Warning" class="p-button-rounded p-button-warning"></button>
+<button pButton pRipple type="button" label="Help" class="p-button-rounded p-button-help"></button>
+
+<button pButton pRipple type="button" icon="pi pi-check" class="p-button-rounded p-button-text"></button>
+<button pButton pRipple type="button" icon="pi pi-bookmark" class="p-button-rounded p-button-secondary p-button-text"></button>
+<button pButton pRipple type="button" icon="pi pi-search" class="p-button-rounded p-button-success p-button-text"></button>
+<button pButton pRipple type="button" icon="pi pi-user" class="p-button-rounded p-button-info p-button-text"></button>
+<button pButton pRipple type="button" icon="pi pi-bell" class="p-button-rounded p-button-warning p-button-text"></button>
+<button pButton pRipple type="button" icon="pi pi-heart" class="p-button-rounded p-button-help p-button-text"></button>
+<button pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-danger p-button-text"></button>
+<button pButton pRipple type="button" icon="pi pi-filter" class="p-button-rounded p-button-text p-button-plain"></button>
+
+
